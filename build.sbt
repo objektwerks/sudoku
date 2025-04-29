@@ -11,7 +11,7 @@ libraryDependencies ++= {
   )
 }
 scalacOptions ++= Seq(
-  "-Wunused:all"
+  "-Wunused:all",
   // "-rewrite",
   // "-source:3.7-migration"
   // For 3.7.0-RC4 warnings: "-Wconf:msg=Implicit parameters should be provided with a `using` clause:s"
