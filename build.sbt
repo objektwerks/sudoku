@@ -5,7 +5,6 @@ scalaVersion := "3.6.4" // Scala 3.7.0-RC4 still breaks ScalaFx!
 libraryDependencies ++= {
   Seq(
     "org.scalafx" %% "scalafx" % "24.0.0-R35",
-    "org.controlsfx" % "controlsfx" % "11.2.1",
     "ch.qos.logback" % "logback-classic" % "1.5.18"
   )
 }
