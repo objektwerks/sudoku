@@ -3,7 +3,7 @@ package objektwerks.ui
 import scalafx.scene.Scene
 import scalafx.scene.layout.VBox
 
-final class View(context: Context, model: Model):
+final class View(context: Context):
   val menu = Menu(context)
 
   val vbox = new VBox:
