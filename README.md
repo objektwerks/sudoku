@@ -6,6 +6,11 @@ Build
 -----
 1. sbt clean compile
 
+Run
+---
+1. sbt run
+
+
 Resources
 ---------
 * [Sudoku Rules](https://www.sudokuonline.io/tips/sudoku-rules)
