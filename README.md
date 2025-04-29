@@ -8,6 +8,7 @@ Rules
 2. Each column **must** contain the numbers from 1 to 9, without repetitions.
 3. The digits **can only** occur **once** per block.
 4. The sum of each row, column and block **must** equal 45.
+5. Each puzzle **has a** unique solution.
 
 Build
 -----
