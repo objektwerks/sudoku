@@ -49,7 +49,7 @@ NPM Versioning
 
 NPM Registry
 ------------
->GCiphers is deployed to: https://www.npmjs.com/package/gciphers
+>GCiphers is deployed to: https://www.npmjs.com/package/sudoku
 
 Resources
 ---------
