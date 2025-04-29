@@ -35,9 +35,9 @@ Assembly
 
 Execute
 -------
-1. ```java -jar target/scala-3.6.4/gsudoku-0.0.0.jar```
+1. ```java -jar target/scala-3.6.4/gsudoku-0.0.1.jar```
 >or:
-1. ```java -jar .assembly/gsudoku-0.0.0.jar```
+1. ```java -jar .assembly/gsudoku-0.0.1.jar```
 
 Deploy
 ------
