@@ -10,6 +10,10 @@ libraryDependencies ++= {
     "ch.qos.logback" % "logback-classic" % "1.5.18"
   )
 }
+javaOptions ++= Seq(
+  "--enable-native-access=ALL-UNNAMED",
+  "--enable-native-access=javafx.graphics"
+)
 scalacOptions ++= Seq(
   "-Wunused:all",
   // "-rewrite",
