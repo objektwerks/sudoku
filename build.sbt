@@ -1,6 +1,6 @@
 name := "gsudoku"
 organization := "objektwerks"
-version := "0.0.1"
+version := "1.0.0"
 scalaVersion := "3.6.4" // Scala 3.7.0-RC4 still breaks ScalaFx!
 libraryDependencies ++= {
   Seq(
