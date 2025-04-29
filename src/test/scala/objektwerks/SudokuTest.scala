@@ -18,5 +18,5 @@ class SukokuTest extends AnyFunSuite with Matchers:
             Array(0,0,0, 0,8,0, 0,7,9),
       )
 
-    println(prettyString(problem))
-    solve(problem)
+    println(Sudoku.prettyString(problem))
+    Sudoku.solve(problem)
