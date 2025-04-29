@@ -3,7 +3,7 @@ package objektwerks
 object Sudoku:
   type Board = Array[Array[Int]]
 
-  def prettyString(sudoku: Board): String = {
+  private def prettyString(sudoku: Board): String =
     sudoku.grouped(3).map { bigGroup =>
       bigGroup.map { row =>
         row.grouped(3).map { smallGroup =>
@@ -11,9 +11,8 @@ object Sudoku:
         }.mkString("|", "|", "|")
       }.mkString("\n")
     }.mkString("+-------+-------+-------+\n", "\n+-------+-------+-------+\n", "\n+-------+-------+-------+")
-  }
 
-  def validate(sudoku: Board, x: Int, y: Int, value: Int): Boolean = {
+  private def validate(sudoku: Board, x: Int, y: Int, value: Int): Boolean =
     val row = sudoku(y)
     val rowProperty = !row.contains(value)
 
@@ -29,9 +28,8 @@ object Sudoku:
     val boxProperty = !box.contains(value)
 
     rowProperty && columnProperty && boxProperty
-  }
 
-  def solve(sudoku: Board, x: Int = 0, y: Int = 0): Unit = {
+  def solve(sudoku: Board, x: Int = 0, y: Int = 0): Unit =
     if (y >= 9) println(prettyString(sudoku)) // final solution
     else if (x >= 9) solve(sudoku, 0, y + 1) // need to fill in the next row
     else if (sudoku(y)(x) > 0) solve(sudoku, x + 1, y) // need to fill in the next cell (cell to the right)
@@ -42,4 +40,3 @@ object Sudoku:
       solve(sudoku, x + 1, y)
       // remove the value
       sudoku(y)(x) = 0
-    }
