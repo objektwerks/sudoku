@@ -14,6 +14,12 @@ Assembly
 --------
 1. sbt clean test assembly copyAssemblyJar
 
+Execute
+-------
+1. ```java -jar target/scala-3.6.4/sudoku-0.0.0.jar```
+>or:
+1. ```java -jar .assembly/sudoku-0.0.0.jar```
+
 Deploy
 ------
 1. edit build.sbt ( jarVersion + version )
