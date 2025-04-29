@@ -7,7 +7,7 @@ Structure
 * Rows - 9 rows ***of*** 9 horizontal cells
 * Columns - 9 columns ***of*** 9 vertical cells
 * Blocks - 9 blocks ***of*** 9 cells
-* Cells - 81 cells across 9 rows, 9 columns ***and*** 9 blocks
+* Cells - 81 cells across 9 rows ***and*** 9 columns ***or*** 9 blocks
 
 Rules
 -----
