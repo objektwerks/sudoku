@@ -13,7 +13,7 @@
     "version": "0.0.0",
     "jdeploy": {
         "jdk": false,
-        "javaVersion": "23",
+        "javaVersion": "24",
         "jar": ".assembly/gsudoku-0.0.0.jar",
         "javafx": true,
         "javafxVersion": "23.0.2",
