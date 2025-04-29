@@ -19,4 +19,5 @@ class SukokuTest extends AnyFunSuite with Matchers:
       )
 
     println(Sudoku.prettyString(problem))
-    Sudoku.solve(problem)
+    println(Sudoku.solve(problem).length)
+    Sudoku.solve(problem).length should be > 0
