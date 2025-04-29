@@ -9,7 +9,7 @@ import scalafx.scene.layout.GridPane
 
 final class Menu(context: Context) extends MenuBar:
   val textAreaAbout = new TextArea():
-    minWidth = 275
+    minWidth = 280
     editable = false
     wrapText = true
     text = context.aboutAlertContentText
