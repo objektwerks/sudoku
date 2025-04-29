@@ -8,16 +8,16 @@
     "preferGlobal": true,
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/objektwerks/sudoku.git"
+        "url": "git+https://github.com/objektwerks/gsudoku.git"
     },
-    "version": "3.3.0",
+    "version": "0.0.0",
     "jdeploy": {
         "jdk": false,
         "javaVersion": "23",
-        "jar": ".assembly/sudoku-0.0.0.jar",
+        "jar": ".assembly/gsudoku-0.0.0.jar",
         "javafx": true,
         "javafxVersion": "23.0.2",
-        "title": "GCiphers"
+        "title": "GSudoku"
     },
     "dependencies": {
         "command-exists-promise": "^2.0.2",
@@ -27,12 +27,12 @@
         "shelljs": "^0.8.4"
     },
     "license": "Apache 2.0",
-    "name": "gciphers",
+    "name": "gsudoku",
     "files": [
         "jdeploy-bundle"
     ],
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
-    "homepage": "https://github.com/objektwerks/sudoku"
+    "homepage": "https://github.com/objektwerks/gsudoku"
 }
