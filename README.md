@@ -6,7 +6,7 @@ Structure
 ---------
 * Rows - 9 rows ***of*** 9 horizontal cells
 * Columns - 9 columns ***of*** 9 vertical cells
-* Blocks - 9 ***of*** 9 cells
+* Blocks - 9 blocks ***of*** 9 cells
 * Cells - 81
 
 Rules
