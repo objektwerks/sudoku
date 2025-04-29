@@ -5,6 +5,7 @@ Sudoku
 Rules
 -----
 1. Each row must contain the numbers from 1 to 9, without repetitions.
+2. Each column must contain the numbers from 1 to 9, without repetitions.
 
 Build
 -----
