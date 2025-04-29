@@ -9,8 +9,6 @@ import java.awt.Taskbar.Feature
 import scalafx.application.JFXApp3
 import scalafx.scene.image.Image
 
-import objektwerks.Store
-
 object App extends JFXApp3 with LazyLogging:
   logger.info("Starting app ...")
 
