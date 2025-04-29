@@ -1,2 +1,3 @@
-# sudoku
-Sudoku app using ScalaFx and Scala 3.
+Sudoku
+------
+>Sudoku app using ScalaFx and Scala 3.
