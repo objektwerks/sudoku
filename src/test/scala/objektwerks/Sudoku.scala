@@ -56,10 +56,7 @@ object Sudoku:
     else (1 to 9)
       .filter(value => validate(sudoku, x, y, value))
       .foreach { value =>
-        // fill the sudoku board with the value
-        sudoku(y)(x) = value
-        // try the next cell
-        resolve(sudoku, x + 1, y)
-        // remove the value
-        sudoku(y)(x) = 0
+        sudoku(y)(x) = value // fill the sudoku board with the value
+        resolve(sudoku, x + 1, y) // try the next cell
+        sudoku(y)(x) = 0 // remove the value
       }

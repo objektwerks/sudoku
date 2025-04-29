@@ -19,8 +19,7 @@ class SukokuTest extends AnyFunSuite with Matchers:
       )
 
     Sudoku.resolve(problem)
-    
-    /*
+
     val solved = Sudoku.solve(problem)
 
     println("Problem:")
@@ -29,4 +28,4 @@ class SukokuTest extends AnyFunSuite with Matchers:
     println("Solved:")
     println(Sudoku.prettyString(solved))
 
-    solved.length shouldBe 9 */
+    solved.length shouldBe 9
