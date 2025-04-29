@@ -18,9 +18,12 @@ class SukokuTest extends AnyFunSuite with Matchers:
             Array(0,0,0, 0,8,0, 0,7,9),
       )
 
-    val board = Sudoku.solve(problem)
+    val solved = Sudoku.solve(problem)
 
+    println("Problem:")
     println(Sudoku.prettyString(problem))
-    println(Sudoku.prettyString(board))
 
-    board.length shouldBe 9
+    println("Solved:")
+    println(Sudoku.prettyString(solved))
+
+    solved.length shouldBe 9
