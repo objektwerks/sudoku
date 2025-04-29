@@ -14,6 +14,19 @@ Assembly
 --------
 1. sbt clean test assembly copyAssemblyJar
 
+Deploy
+------
+1. edit build.sbt ( jarVersion + version )
+2. edit app.conf ( about > alert > contentText )
+3. edit package.json ( version + jdeploy / jar )
+4. edit readme
+5. sbt clean test assembly copyAssemblyJar
+6. perform github release ( from https://github.com/objektwerks/sudoku )
+7. npm login
+8. jdeploy publish ( to https://www.jdeploy.com/~sudoku )
+9. check email for npm message
+>See [jDeploy Docs](https://www.jdeploy.com/docs/manual/#_getting_started) for details.
+
 Resources
 ---------
 * [Sudoku Rules](https://www.sudokuonline.io/tips/sudoku-rules)
