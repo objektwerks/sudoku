@@ -2,6 +2,10 @@ Sudoku
 ------
 >Sudoku app using ScalaFx and Scala 3.
 
+Rules
+-----
+1. Each row must contain the numbers from 1 to 9, without repetitions.
+
 Build
 -----
 1. sbt clean compile
