@@ -10,12 +10,7 @@ final class View(context: Context, model: Model):
     prefWidth = context.windowWidth
     prefHeight = context.windowHeight
     children = List(
-      menu,
-      DatePane(context, model),
-      TextsPane(context, model),
-      NumbersPane(context, model),
-      EncodingsPane(context, model),
-      EnterPane(context, model)
+      menu
     )
 
   val scene = new Scene:
