@@ -46,3 +46,20 @@ object Sudoku:
         sudoku(y)(x) = 0 // remove the value
       }
       sudoku
+
+  def resolve(sudoku: Board,
+              x: Int = 0,
+              y: Int = 0): Unit =
+    if (y >= 9) println(prettyString(sudoku)) // final solution
+    else if (x >= 9) resolve(sudoku, 0, y + 1) // need to fill in the next row
+    else if (sudoku(y)(x) > 0) resolve(sudoku, x + 1, y) // need to fill in the next cell (cell to the right)
+    else (1 to 9)
+      .filter(value => validate(sudoku, x, y, value))
+      .foreach { value =>
+        // fill the sudoku board with the value
+        sudoku(y)(x) = value
+        // try the next cell
+        resolve(sudoku, x + 1, y)
+        // remove the value
+        sudoku(y)(x) = 0
+      }
