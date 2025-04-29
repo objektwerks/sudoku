@@ -1,4 +1,4 @@
-name := "sudoku"
+name := "gsudoku"
 organization := "objektwerks"
 version := "0.0.0"
 scalaVersion := "3.6.4" // Scala 3.7.0-RC4 still breaks ScalaFx!
@@ -57,7 +57,7 @@ copyAssemblyJar := {
 // End: Assembly Tasks
 
 // Begin: Assembly
-assemblyJarName := s"sudoku-${version.value}.jar"
+assemblyJarName := s"gsudoku-${version.value}.jar"
 assembly / assemblyMergeStrategy := {
   case PathList("META-INF",  xs @ _*) => MergeStrategy.discard
   case x => MergeStrategy.first
