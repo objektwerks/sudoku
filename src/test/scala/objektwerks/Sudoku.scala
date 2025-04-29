@@ -3,7 +3,10 @@ package objektwerks
 object Sudoku:
   type Board = Array[Array[Int]]
 
-  private def validate(sudoku: Board, x: Int, y: Int, value: Int): Boolean =
+  private def validate(sudoku: Board,
+                       x: Int,
+                       y: Int,
+                       value: Int): Boolean =
     val row = sudoku(y)
     val rowProperty = !row.contains(value)
 
