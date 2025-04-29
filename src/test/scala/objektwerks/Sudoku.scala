@@ -32,7 +32,9 @@ object Sudoku:
       }.mkString("\n")
     }.mkString("+-------+-------+-------+\n", "\n+-------+-------+-------+\n", "\n+-------+-------+-------+")
 
-  def solve(sudoku: Board, x: Int = 0, y: Int = 0): Unit =
+  def solve(sudoku: Board,
+            x: Int = 0,
+            y: Int = 0): Unit =
     if (y >= 9) println(prettyString(sudoku)) // final solution
     else if (x >= 9) solve(sudoku, 0, y + 1) // need to fill in the next row
     else if (sudoku(y)(x) > 0) solve(sudoku, x + 1, y) // need to fill in the next cell (cell to the right)
