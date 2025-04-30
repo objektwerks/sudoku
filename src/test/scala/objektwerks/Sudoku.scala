@@ -15,10 +15,10 @@ object Sudoku:
 
     val boxX = x / 3
     val boxY = y / 3
-    val box = for {
+    val box = for
       yb <- (boxY * 3) until (boxY * 3 + 3) // indices for rows in THIS box
       xb <- (boxX * 3) until (boxX * 3 + 3) // same for cols
-    } yield sudoku(yb)(xb)
+    yield sudoku(yb)(xb)
     val boxProperty = !box.contains(value)
 
     rowProperty && columnProperty && boxProperty
