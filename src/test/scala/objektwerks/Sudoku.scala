@@ -40,5 +40,4 @@ object Sudoku:
       solve(sudoku, x + 1, y)
       // remove the value
       sudoku(y)(x) = 0
-      if value == 9 then solve(sudoku)
     }
