@@ -1,6 +1,6 @@
 package objektwerks
 
-object Sudoku:
+object TestSudoku:
   type Board = Array[Array[Int]]
 
   private def validate(sudoku: Board,

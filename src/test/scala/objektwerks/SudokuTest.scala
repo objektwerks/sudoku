@@ -3,7 +3,7 @@ package objektwerks
 import org.scalatest.funsuite.AnyFunSuite
 import org.scalatest.matchers.should.Matchers
 
-import Sudoku.*
+import TestSudoku.*
 
 final class SukokuTest extends AnyFunSuite with Matchers:
   test("sudoku"):
