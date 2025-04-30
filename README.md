@@ -1,6 +1,6 @@
 GSudoku
 -------
->Sudoku app using ScalaFx and Scala 3.
+>Sudoku app using ScalaFx and Scala 3. WIP!
 
 Structure
 ---------
