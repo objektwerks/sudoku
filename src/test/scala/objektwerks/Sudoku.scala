@@ -45,7 +45,7 @@ object Sudoku:
         solve(sudoku, x + 1, y) // try the next cell
         sudoku(y)(x) = 0 // remove the value
       }
-      sudoku
+      solve(sudoku, x, y)
 
   def resolve(sudoku: Board,
               x: Int = 0,
