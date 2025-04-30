@@ -1,5 +1,8 @@
 package objektwerks
 
+/**
+  * Taken from here: https://rockthejvm.com/articles/a-backtracking-sudoku-solver-in-scala as a test solver.
+  */
 object TestSudoku:
   type Board = Array[Array[Int]]
 
