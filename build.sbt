@@ -15,10 +15,6 @@ Compile / javaOptions ++= Seq(
   "--enable-native-access=ALL-UNNAMED",
   "--enable-native-access=javafx.graphics"
 )
-Test / javaOptions ++= Seq(
-  "--enable-native-access=ALL-UNNAMED",
-  "--enable-native-access=javafx.graphics"
-)
 scalacOptions ++= Seq(
   "-Wunused:all",
   // "-rewrite",
