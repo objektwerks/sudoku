@@ -3,29 +3,6 @@ package objektwerks
 object Solver: 
   type Board = Array[Array[Int]]
 
-/* 
-  def solve(): Option[Array[Array[Int]]] = solveHelper(row = 0, col = 0)
-  private def solveHelper(row: Int, col: Int): Option[Array[Array[Int]]] =
-    if (row == 9) {
-      Some(puzzle)
-    } else if (col == 9) {
-      solveHelper(row + 1, 0)
-    } else if (puzzle(row)(col) != 0) {
-      solveHelper(row, col + 1)
-    } else {
-      val validDigits = getValidDigits(row, col)
-      validDigits.foreach { digit =>
-        puzzle(row)(col) = digit
-        val result = solveHelper(row, col + 1)
-        if (result.isDefined) {
-          return result
-        }
-        puzzle(row)(col) = 0
-      }
-      None
-    }
-*/
-
   def solve(board: Board,
             row: Int = 0,
             column: Int = 0): Option[Board] =
