@@ -4,7 +4,7 @@ final case class Digit()
 
 final case class Cell(digit: Digit)
 
-final class Row
+final case class Row(cells: Set[Cell])
 
 final class Column
  
