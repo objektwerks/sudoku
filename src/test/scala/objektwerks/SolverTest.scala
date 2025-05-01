@@ -7,7 +7,7 @@ import Solver.*
 
 final class SolverTest extends AnyFunSuite with Matchers:
   test("solver"):
-    val problem =
+    val board =
       Array(
             Array(5,3,0, 0,7,0, 0,0,0),
             Array(6,0,0, 1,9,5, 0,0,0),
@@ -20,5 +20,5 @@ final class SolverTest extends AnyFunSuite with Matchers:
             Array(0,0,0, 0,8,0, 0,7,9),
       )
 
-    println(print(problem))
-    solve(problem)
+    println( print(board) )
+    println( print( solve(board).get ) )
