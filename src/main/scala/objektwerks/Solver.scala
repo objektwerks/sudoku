@@ -12,7 +12,8 @@ def solve(board: Board,
           column: Int = 0): Unit =
   if row >= 9 then
     println(s"output board:\n${print(board)}")
-    assert(board == awnser())
+    println(s"answer board:\n${print(board)}")
+    assert( board.sameElements(answer()), "*** output board not valid" )
   
   else if column >= 9 then
     solve(board, row + 1, 0)
@@ -70,7 +71,7 @@ def default(): Board =
     Array(0,0,0, 0,8,0, 0,7,9)
   )
 
-def awnser(): Board =
+def answer(): Board =
   Array(
     Array(5,3,4, 6,7,8, 9,1,2),
     Array(6,7,2, 1,9,5, 3,4,8),
