@@ -29,25 +29,26 @@ object Solver:
 */
 
   def solve(board: Board,
-            column: Int = 0,
-            row: Int = 0): Option[Board] =
+            row: Int = 0,
+            column: Int = 0): Option[Board] =
     if (row >= 9) Some(board)
     
     else if (column >= 9) solve(board, 0, row + 1) // need to fill in the next row
     
     else if (board(row)(column) > 0) solve(board, column + 1, row) // need to fill in the next cell (cell to the right)
     
-    else (1 to 9)
-      .filter(value => validate(board, column, row, value))
-      .foreach: value =>
-        board(row)(column) = value // fill the sudoku board with the value
-        solve(board, column + 1, row) // try the next cell
-        board(row)(column) = 0 // remove the value
+    else
+      (1 to 9)
+        .filter(value => validate(board, row, column, value))
+        .foreach: value =>
+          board(row)(column) = value // fill board with value
+          solve(board, row, column + 1) // try the next cell
+          board(row)(column) = 0 // remove the value
       None
 
   def validate(board: Board,
-               column: Int,
                row: Int,
+               column: Int,
                value: Int): Boolean =
     val doesRowContainValue = !board(row).contains(value)
 
