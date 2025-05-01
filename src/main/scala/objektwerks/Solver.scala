@@ -1,14 +1,12 @@
 package objektwerks
 
-import scala.util.boundary, boundary.break
-
 object Solver: 
   type Board = Array[Array[Int]]
 
   def solve(board: Board,
             row: Int = 0,
-            column: Int = 0): Option[Board] =
-    if (row >= 9) Some(board)
+            column: Int = 0): Board =
+    if (row >= 9) board
     
     else if (column >= 9) solve(board, 0, row + 1)
     
@@ -19,11 +17,9 @@ object Solver:
         .filter(value => validate(board, row, column, value))
         .foreach: value =>
           board(row)(column) = value
-          boundary:
-            val newBoard = solve(board, row, column + 1)
-            if newBoard.isDefined then break(newBoard)
+          solve(board, row, column + 1)
           board(row)(column) = 0
-      None
+        board
 
   def validate(board: Board,
                row: Int,
