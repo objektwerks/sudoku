@@ -2,12 +2,12 @@ package objektwerks
 
 type Board = Array[Array[Int]]
 
-final case class Solver(board: Board) derives CanEqual:
-  println( print(board) )
+final class Solver(board: Board):
+  println(s"input board:\n ${print(board)}")
 
   def solve(row: Int = 0,
             column: Int = 0): Unit =
-    if (row >= 9) println( print(board) )
+    if (row >= 9) println(s"output board:\n ${print(board)}")
     
     else if (column >= 9) solve(row + 1, 0)
     
@@ -20,9 +20,9 @@ final case class Solver(board: Board) derives CanEqual:
         solve(row, column + 1)
         board(row)(column) = 0
 
-  def validate(row: Int,
-               column: Int,
-               value: Int): Boolean =
+  private def validate(row: Int,
+                       column: Int,
+                       value: Int): Boolean =
     val doesRowContainValue = !board(row).contains(value)
 
     val doesColumnContainValue = !board.map(rows => rows.apply(column)).contains(value)
@@ -37,7 +37,7 @@ final case class Solver(board: Board) derives CanEqual:
 
     doesRowContainValue && doesColumnContainValue && doesBoxContainValue
 
-  def print(board: Board): String =
+  private def print(board: Board): String =
     board.grouped(3).map: rows =>
       rows.map: row =>
         row.grouped(3).map: columns =>
