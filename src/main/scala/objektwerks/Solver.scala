@@ -46,17 +46,15 @@ object Solver:
       None
 
   def validate(board: Board,
-               x: Int,
-               y: Int,
+               column: Int,
+               row: Int,
                value: Int): Boolean =
-    val row = board(y)
-    val doesRowContainValue = !row.contains(value)
+    val doesRowContainValue = !board(row).contains(value)
 
-    val column = board.map(r => r.apply(x))
-    val doesColumnContainValue = !column.contains(value)
+    val doesColumnContainValue = !board.map(rows => rows.apply(column)).contains(value)
 
-    val boxX = x / 3
-    val boxY = y / 3
+    val boxX = column / 3
+    val boxY = row / 3
     val box = for {
       rowY <- (boxY * 3) until (boxY * 3 + 3)
       colX <- (boxX * 3) until (boxX * 3 + 3)
