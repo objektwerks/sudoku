@@ -38,10 +38,10 @@ object Solver:
     doesRowContainValue && doesColumnContainValue && doesBoxContainValue
 
   def print(board: Board): String =
-    board.grouped(3).map: bigGroup =>
-      bigGroup.map: row =>
-        row.grouped(3).map: smallGroup =>
-          smallGroup.mkString(" ", " ", " ")
+    board.grouped(3).map: rows =>
+      rows.map: row =>
+        row.grouped(3).map: columns =>
+          columns.mkString(" ", " ", " ")
         .mkString("|", "|", "|")
       .mkString("\n")
     .mkString("+-------+-------+-------+\n", "\n+-------+-------+-------+\n", "\n+-------+-------+-------+")
