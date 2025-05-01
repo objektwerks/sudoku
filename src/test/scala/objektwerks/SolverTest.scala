@@ -21,4 +21,4 @@ final class SolverTest extends AnyFunSuite with Matchers:
       )
 
     println( print(board) )
-    println( print( solve(board).get ) )
+    println( solve(board) )
