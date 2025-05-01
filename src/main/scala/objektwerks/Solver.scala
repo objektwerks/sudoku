@@ -6,7 +6,7 @@ type Board = ArraySeq[ArraySeq[Int]]
 
 @main
 def runSolver: Unit =
-  println(s"input board:\n${print( default() )}")
+  println(s"input board:\n${print(default())}")
   solve( default() )
 
 def solve(board: Board,
@@ -14,7 +14,7 @@ def solve(board: Board,
           column: Int = 0): Unit =
   if row >= 9 then
     println(s"output board:\n${print(board)}")
-    assert(board == answer(), "*** output board not valid")
+    assert(board == answer(), "*** The output board is invalid! ***")
   
   else if column >= 9 then
     solve(board, row + 1, 0)
