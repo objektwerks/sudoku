@@ -2,25 +2,25 @@ package objektwerks
 
 type Board = Array[Array[Int]]
 
-final class Solver(board: Board):
-  println(s"input board:\n ${print(board)}")
-
-  def solve(row: Int = 0,
+object Solver:
+  def solve(board: Board,
+            row: Int = 0,
             column: Int = 0): Unit =
     if (row >= 9) println(s"output board:\n ${print(board)}")
     
-    else if (column >= 9) solve(row + 1, 0)
+    else if (column >= 9) solve(board, row + 1, 0)
     
-    else if (board(row)(column) > 0) solve(row, column + 1)
+    else if (board(row)(column) > 0) solve(board, row, column + 1)
     
     else (1 to 9)
-      .filter(value => validate(row, column, value))
+      .filter(value => validate(board, row, column, value))
       .foreach: value =>
         board(row)(column) = value
-        solve(row, column + 1)
+        solve(board, row, column + 1)
         board(row)(column) = 0
 
-  private def validate(row: Int,
+  private def validate(board: Board,
+                       row: Int,
                        column: Int,
                        value: Int): Boolean =
     val doesRowContainValue = !board(row).contains(value)
@@ -37,7 +37,7 @@ final class Solver(board: Board):
 
     doesRowContainValue && doesColumnContainValue && doesBoxContainValue
 
-  private def print(board: Board): String =
+  def print(board: Board): String =
     board.grouped(3).map: rows =>
       rows.map: row =>
         row.grouped(3).map: columns =>

@@ -17,5 +17,5 @@ final class SolverTest extends AnyFunSuite with Matchers:
         Array(0,0,0, 4,1,9, 0,0,5),
         Array(0,0,0, 0,8,0, 0,7,9),
       )
-    val solver = Solver(problem)
-    solver.solve()
+    println(s"input board:\n ${Solver.print(problem)}")
+    Solver.solve(problem)
