@@ -34,10 +34,10 @@ object Solver:
 
     val boxX = column / 3
     val boxY = row / 3
-    val box = for {
+    val box = for
       rowY <- (boxY * 3) until (boxY * 3 + 3)
       colX <- (boxX * 3) until (boxX * 3 + 3)
-    } yield board(rowY)(colX)
+    yield board(rowY)(colX)
     val doesBoxContainValue = !box.contains(value)
 
     doesRowContainValue && doesColumnContainValue && doesBoxContainValue
