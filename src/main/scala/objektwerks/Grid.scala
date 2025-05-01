@@ -1,3 +1,3 @@
 package objektwerks
 
-object Grid
+final class Grid
