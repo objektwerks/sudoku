@@ -14,7 +14,7 @@ def solve(board: Board,
           column: Int = 0): Unit =
   if row >= 9 then
     println(s"output board:\n${print(board)}")
-    assert( board == answer(), "*** output board not valid" )
+    assert(board == answer(), "*** output board not valid")
   
   else if column >= 9 then
     solve(board, row + 1, 0)
