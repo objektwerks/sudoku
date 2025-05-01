@@ -1,3 +1,3 @@
 package objektwerks
 
-final class Solver
+final case class Solver(grid: Grid)
