@@ -3,6 +3,20 @@ package objektwerks
 object Solver: 
   type Board = Array[Array[Int]]
 
+  def solve(board: Board,
+            x: Int = 0,
+            y: Int = 0): Unit =
+    if (y >= 9) println(toString(board)) // final solution
+    
+    else if (x >= 9) solve(board, 0, y + 1) // need to fill in the next row
+    
+    else if (board(y)(x) > 0) solve(board, x + 1, y) // need to fill in the next cell (cell to the right)
+    
+    else (1 to 9).filter(value => validate(board, x, y, value)).foreach: value =>
+      board(y)(x) = value // fill the sudoku board with the value
+      solve(board, x + 1, y) // try the next cell
+      board(y)(x) = 0 // remove the value
+
   def validate(board: Board,
                x: Int,
                y: Int,
