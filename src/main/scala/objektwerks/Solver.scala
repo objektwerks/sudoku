@@ -5,12 +5,12 @@ object Solver:
 
   def solve(board: Board,
             row: Int = 0,
-            column: Int = 0): Board =
-    if (row >= 9) board
+            column: Int = 0): Unit =
+    if (row >= 9) println( print(board) )
     
-    else if (column >= 9) solve(board, 0, row + 1)
+    else if (column >= 9) solve(board, row + 1, 0)
     
-    else if (board(row)(column) > 0) solve(board, column + 1, row)
+    else if (board(row)(column) > 0) solve(board, row, column + 1)
     
     else
       (1 to 9)
@@ -19,7 +19,6 @@ object Solver:
           board(row)(column) = value
           solve(board, row, column + 1)
           board(row)(column) = 0
-        board
 
   def validate(board: Board,
                row: Int,
