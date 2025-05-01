@@ -29,20 +29,21 @@ object Solver:
 */
 
   def solve(board: Board,
-            x: Int = 0,
-            y: Int = 0): Unit =
-    if (y >= 9) println(toString(board)) // final solution
+            column: Int = 0,
+            row: Int = 0): Option[Board] =
+    if (row >= 9) Some(board)
     
-    else if (x >= 9) solve(board, 0, y + 1) // need to fill in the next row
+    else if (column >= 9) solve(board, 0, row + 1) // need to fill in the next row
     
-    else if (board(y)(x) > 0) solve(board, x + 1, y) // need to fill in the next cell (cell to the right)
+    else if (board(row)(column) > 0) solve(board, column + 1, row) // need to fill in the next cell (cell to the right)
     
     else (1 to 9)
-      .filter(value => validate(board, x, y, value))
+      .filter(value => validate(board, column, row, value))
       .foreach: value =>
-        board(y)(x) = value // fill the sudoku board with the value
-        solve(board, x + 1, y) // try the next cell
-        board(y)(x) = 0 // remove the value
+        board(row)(column) = value // fill the sudoku board with the value
+        solve(board, column + 1, row) // try the next cell
+        board(row)(column) = 0 // remove the value
+      None
 
   def validate(board: Board,
                x: Int,
