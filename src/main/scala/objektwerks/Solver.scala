@@ -1,3 +1,3 @@
 package objektwerks
 
-object Solver
+final class Solver
