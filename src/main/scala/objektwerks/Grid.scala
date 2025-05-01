@@ -8,4 +8,4 @@ final case class Row(cells: Set[Cell])
 
 final case class Column(cells: Set[Cell])
  
-final class Grid
+final case class Grid(rows: Set[Cell], columns: Set[Cell])
