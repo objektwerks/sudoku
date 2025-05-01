@@ -1,5 +1,7 @@
 package objektwerks
 
+import scala.util.boundary, boundary.break
+
 object Solver: 
   type Board = Array[Array[Int]]
 
@@ -17,7 +19,9 @@ object Solver:
         .filter(value => validate(board, row, column, value))
         .foreach: value =>
           board(row)(column) = value
-          solve(board, row, column + 1)
+          boundary:
+            val newBoard = solve(board, row, column + 1)
+            if newBoard.isDefined then break(newBoard)
           board(row)(column) = 0
       None
 
