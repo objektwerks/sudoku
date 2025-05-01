@@ -7,7 +7,7 @@ object Solver:
             row: Int = 0,
             column: Int = 0): Unit =
     if row >= 9 then
-      println(s"output board:\n ${print(board)}")
+      println(s"output board:\n${print(board)}")
     
     else if column >= 9 then
       solve(board, row + 1, 0)
