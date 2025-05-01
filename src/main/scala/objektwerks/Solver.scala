@@ -6,11 +6,14 @@ object Solver:
   def solve(board: Board,
             row: Int = 0,
             column: Int = 0): Unit =
-    if (row >= 9) println(s"output board:\n ${print(board)}")
+    if (row >= 9) then
+      println(s"output board:\n ${print(board)}")
     
-    else if (column >= 9) solve(board, row + 1, 0)
+    else if (column >= 9) then
+      solve(board, row + 1, 0)
     
-    else if (board(row)(column) > 0) solve(board, row, column + 1)
+    else if (board(row)(column) > 0) then
+      solve(board, row, column + 1)
     
     else (1 to 9)
       .filter(value => validate(board, row, column, value))
