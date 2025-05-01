@@ -3,6 +3,10 @@ package objektwerks
 type Board = Array[Array[Int]]
 
 object Solver:
+  def main(args: Array[String]): Unit =
+    println(s"input board:\n${Solver.print( Solver.default() )}")
+    Solver.solve( Solver.default() )
+
   def solve(board: Board,
             row: Int = 0,
             column: Int = 0): Unit =
