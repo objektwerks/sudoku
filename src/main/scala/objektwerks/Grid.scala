@@ -1,8 +1,8 @@
 package objektwerks
 
-final class Digit
+final case class Digit()
 
-final class Cell
+final case class Cell(digit: Digit)
 
 final class Row
 
