@@ -3,11 +3,11 @@ package objektwerks
 type Board = Array[Array[Int]]
 
 final case class Solver(board: Board) derives CanEqual:
-  println( print() )
+  println( print(board) )
 
   def solve(row: Int = 0,
             column: Int = 0): Unit =
-    if (row >= 9) println( print() )
+    if (row >= 9) println( print(board) )
     
     else if (column >= 9) solve(row + 1, 0)
     
@@ -37,7 +37,7 @@ final case class Solver(board: Board) derives CanEqual:
 
     doesRowContainValue && doesColumnContainValue && doesBoxContainValue
 
-  def print(): String =
+  def print(board: Board): String =
     board.grouped(3).map: rows =>
       rows.map: row =>
         row.grouped(3).map: columns =>
