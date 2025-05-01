@@ -8,17 +8,17 @@ object Solver:
             column: Int = 0): Option[Board] =
     if (row >= 9) Some(board)
     
-    else if (column >= 9) solve(board, 0, row + 1) // need to fill in the next row
+    else if (column >= 9) solve(board, 0, row + 1)
     
-    else if (board(row)(column) > 0) solve(board, column + 1, row) // need to fill in the next cell (cell to the right)
+    else if (board(row)(column) > 0) solve(board, column + 1, row)
     
     else
       (1 to 9)
         .filter(value => validate(board, row, column, value))
         .foreach: value =>
-          board(row)(column) = value // fill board with value
-          solve(board, row, column + 1) // try the next cell
-          board(row)(column) = 0 // remove the value
+          board(row)(column) = value
+          solve(board, row, column + 1)
+          board(row)(column) = 0
       None
 
   def validate(board: Board,
@@ -39,7 +39,7 @@ object Solver:
 
     doesRowContainValue && doesColumnContainValue && doesBoxContainValue
 
-  def toString(board: Board): String =
+  def print(board: Board): String =
     board.grouped(3).map: bigGroup =>
       bigGroup.map: row =>
         row.grouped(3).map: smallGroup =>
