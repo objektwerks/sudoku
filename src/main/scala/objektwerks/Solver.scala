@@ -5,8 +5,7 @@ object Solver:
 
   def solve(board: Board,
             row: Int = 0,
-            column: Int = 0,
-            result: (Board, String)): Unit =
+            column: Int = 0): Unit =
     if (row >= 9) println( print(board) )
     
     else if (column >= 9) solve(board, row + 1, 0)
