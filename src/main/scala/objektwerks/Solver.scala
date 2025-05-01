@@ -16,9 +16,9 @@ object Solver:
     val boxX = x / 3
     val boxY = y / 3
     val box = for {
-      yb <- (boxY * 3) until (boxY * 3 + 3) // indices for rows in THIS box
-      xb <- (boxX * 3) until (boxX * 3 + 3) // same for cols
-    } yield board(yb)(xb)
+      rowY <- (boxY * 3) until (boxY * 3 + 3)
+      colX <- (boxX * 3) until (boxX * 3 + 3)
+    } yield board(rowY)(colX)
     val doesBoxContainValue = !box.contains(value)
 
     doesRowContainValue && doesColumnContainValue && doesBoxContainValue
