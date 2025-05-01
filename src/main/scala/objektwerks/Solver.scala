@@ -4,7 +4,7 @@ object Solver:
   type Board = Array[Array[Int]]
 
 /* 
-  def solve(): Option[Array[Array[Int]]] = solveHelper(0, 0)
+  def solve(): Option[Array[Array[Int]]] = solveHelper(row = 0, col = 0)
   private def solveHelper(row: Int, col: Int): Option[Array[Array[Int]]] =
     if (row == 9) {
       Some(puzzle)
@@ -24,8 +24,6 @@ object Solver:
       }
       None
     }
-
-  private def getValidDigits(row: Int, col: Int): Seq[Int] = // Logic to determine valid digits for the given row and column
 */
 
   def solve(board: Board,
