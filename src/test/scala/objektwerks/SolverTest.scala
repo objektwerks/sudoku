@@ -5,8 +5,8 @@ import org.scalatest.matchers.should.Matchers
 
 import Solver.*
 
-final class SukokuTest extends AnyFunSuite with Matchers:
-  test("sudoku"):
+final class SolverTest extends AnyFunSuite with Matchers:
+  test("solver"):
     val problem =
       Array(
             Array(5,3,0, 0,7,0, 0,0,0),
