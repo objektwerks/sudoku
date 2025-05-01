@@ -1,6 +1,8 @@
 package objektwerks
 
-type Board = Array[Array[Int]]
+import scala.collection.mutable.ArraySeq
+
+type Board = ArraySeq[ArraySeq[Int]]
 
 @main
 def runSolver: Unit =
@@ -13,7 +15,7 @@ def solve(board: Board,
   if row >= 9 then
     println(s"output board:\n${print(board)}")
     println(s"answer board:\n${print(board)}")
-    assert( board.sameElements(answer()), "*** output board not valid" )
+    assert( board == answer(), "*** output board not valid" )
   
   else if column >= 9 then
     solve(board, row + 1, 0)
@@ -57,31 +59,31 @@ def print(board: Board): String =
   .mkString("+-------+-------+-------+\n", "\n+-------+-------+-------+\n", "\n+-------+-------+-------+")
 
 def default(): Board =
-  Array(
-    Array(5,3,0, 0,7,0, 0,0,0),
-    Array(6,0,0, 1,9,5, 0,0,0),
-    Array(0,9,8, 0,0,0, 0,6,0),
+  ArraySeq(
+    ArraySeq(5,3,0, 0,7,0, 0,0,0),
+    ArraySeq(6,0,0, 1,9,5, 0,0,0),
+    ArraySeq(0,9,8, 0,0,0, 0,6,0),
 
-    Array(8,0,0, 0,6,0, 0,0,3),
-    Array(4,0,0, 8,0,3, 0,0,1),
-    Array(7,0,0, 0,2,0, 0,0,6),
+    ArraySeq(8,0,0, 0,6,0, 0,0,3),
+    ArraySeq(4,0,0, 8,0,3, 0,0,1),
+    ArraySeq(7,0,0, 0,2,0, 0,0,6),
 
-    Array(0,6,0, 0,0,0, 2,8,0),
-    Array(0,0,0, 4,1,9, 0,0,5),
-    Array(0,0,0, 0,8,0, 0,7,9)
+    ArraySeq(0,6,0, 0,0,0, 2,8,0),
+    ArraySeq(0,0,0, 4,1,9, 0,0,5),
+    ArraySeq(0,0,0, 0,8,0, 0,7,9)
   )
 
 def answer(): Board =
-  Array(
-    Array(5,3,4, 6,7,8, 9,1,2),
-    Array(6,7,2, 1,9,5, 3,4,8),
-    Array(1,9,8, 3,4,2, 5,6,7),
+  ArraySeq(
+    ArraySeq(5,3,4, 6,7,8, 9,1,2),
+    ArraySeq(6,7,2, 1,9,5, 3,4,8),
+    ArraySeq(1,9,8, 3,4,2, 5,6,7),
 
-    Array(8,5,9, 7,6,1, 4,2,3),
-    Array(4,2,6, 8,5,3, 7,9,1),
-    Array(7,1,3, 9,2,4, 8,5,6),
+    ArraySeq(8,5,9, 7,6,1, 4,2,3),
+    ArraySeq(4,2,6, 8,5,3, 7,9,1),
+    ArraySeq(7,1,3, 9,2,4, 8,5,6),
 
-    Array(9,6,1, 5,3,7, 2,8,4),
-    Array(2,8,7, 4,1,9, 6,3,5),
-    Array(3,4,5, 2,8,6, 1,7,9)
+    ArraySeq(9,6,1, 5,3,7, 2,8,4),
+    ArraySeq(2,8,7, 4,1,9, 6,3,5),
+    ArraySeq(3,4,5, 2,8,6, 1,7,9)
   )
