@@ -7,4 +7,4 @@ object Digit:
   extension (digit: Digit)
     def value: Int = digit
  
-final case class Grid(grid: Array[Array[Digit]])
+type Grid = Array[Array[Digit]]
