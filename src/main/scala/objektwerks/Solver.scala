@@ -9,6 +9,10 @@ def runSolver: Unit =
   println(s"input board:\n${print(default())}")
   solve( default() )
 
+/**
+ * This method should be tail recursive.
+ * 
+ * /
 def solve(board: Board,
           row: Int = 0,
           column: Int = 0): Unit =
