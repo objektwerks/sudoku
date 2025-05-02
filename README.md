@@ -6,7 +6,7 @@ Sudoku
 
 >The *Solver.solve* method is not without issues, though. It should be tail recursive, and not contain a side effect.
 
->Satisfying the akward backtracking sudoku technique, though, makes it difficult. No doubt, someone has a better alternative. :)
+>Satisfying the akward *backtracking* sudoku technique, though, makes it difficult. No doubt, someone has a better alternative. :)
 
 Structure
 ---------
