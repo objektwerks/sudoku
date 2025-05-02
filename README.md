@@ -8,6 +8,8 @@ Sudoku
 
 >Satisfying the akward *backtracking* sudoku technique, though, makes it difficult. No doubt, someone has a better alternative. :)
 
+>Moreover, I was never any good at board games. ;)
+
 Structure
 ---------
 * Rows - 9 rows ***of*** 9 horizontal cells
