@@ -10,8 +10,9 @@ def runSolver: Unit =
   solve( default() )
 
 /**
- * This method should be tail recursive.
- * 
+ * This method should be tail recursive, and not contain a side effect.
+ * Satisfying the akward backtracking sudoku technique, though, makes
+ * it difficult. No doubt, someone has a better alternative. :)
  * /
 def solve(board: Board,
           row: Int = 0,
