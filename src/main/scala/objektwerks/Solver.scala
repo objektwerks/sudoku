@@ -9,7 +9,7 @@ def runSolver: Unit =
   println(s"input board:\n${print(default())}")
   solve( default() )
 
-/*
+/**
  * This method should be tail recursive, and not contain a side effect.
  * Satisfying the akward backtracking sudoku technique, though, makes
  * it difficult. No doubt, someone has a better alternative. :)
