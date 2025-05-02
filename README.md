@@ -2,9 +2,11 @@ Sudoku
 -------
 >Sudoku app using Scala 3.
 
->The Solver, herein, is derived from this work [Sudoku, RockTheJvm](https://rockthejvm.com/articles/a-backtracking-sudoku-solver-in-scala)
+>The *Solver*, herein, is derived from this work [Sudoku, RockTheJvm](https://rockthejvm.com/articles/a-backtracking-sudoku-solver-in-scala)
 
+>The *Solver.solve* method is not without issues, though. It should be tail recursive, and not contain a side effect.
 
+>Satisfying the akward backtracking sudoku technique, though, makes it difficult. No doubt, someone has a better alternative. :)
 
 Structure
 ---------
