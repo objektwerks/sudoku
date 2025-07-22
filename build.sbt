@@ -1,4 +1,4 @@
 name := "sudoku"
 organization := "objektwerks"
 version := "4.0.0"
-scalaVersion := "3.7.2-RC1"
+scalaVersion := "3.7.2-RC2"
